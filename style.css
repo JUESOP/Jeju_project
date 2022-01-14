@@ -135,7 +135,7 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
-  color: #1a73ae;
+  color: hsl(204, 93%, 49%);
 }
 
 .navbar__logo a {
@@ -207,10 +207,12 @@ p {
   transform: scale(0.96) translateY(40px);
 }
 
+/* Project */
 .project {
   width: 100%;
   height: 130px;
   margin: 2px;
+  border-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,20 +221,36 @@ p {
 }
 
 .project .list {
-  /* background-color: var(--color-orange); */
-  font-size: var(--font-small);
+  color: #ce231d;
+  font-size: 18px;
   position: absolute;
   padding: 0;
   left: 250px;
-  text-align: left;
+  text-align: right;
+  font-weight: bold;
 }
 
-.project i {
+.project .name {
+    position: absolute;
+    padding: 0;
+    left: 350px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.picture {
   font-size: var(--font-large);
   /* background-color: cornflowerblue; */
   position: absolute;
-  width: 70px;
-  left: 90px;
+  width: 150px;
+  height: 100px;
+  left: 50px;
+  border-radius: 5px;
+}
+
+.picture:hover {
+    transform: scale(1.1);
 }
 
 .project.invisible {
@@ -241,15 +259,14 @@ p {
 
 .arrow-up {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 20px;
+  right: 40px;
   font-size: 28px;
   width: 40px;
   height: 40px;
   background-color: var(--color-pink);
   color: var(--color-white);
   border-radius: var(--size-border-radius);
-  opacity: 0;
   transition: all 300ms ease-in;
   /* pointer-events: none; 안보일땐 클릭 안되게 하는 것 */
 }
@@ -298,20 +315,38 @@ p {
     display: block;
   }
 
-  .project i {
+  .picture {
     left: 30px;
+    width: 100px;
+    height: 80px;
   }
 
   .project .list {
-    left: 130px;
+    color: #ce231d;
+    font-size: 12px;
+    position: absolute;
+    padding: 0;
+    left: 150px;
+    text-align: right;
+    font-weight: bold;
   }
+  
+  .project .name {
+      position: absolute;
+      padding: 0;
+      left: 210px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: bold;
+  }
+  
 
   .arrow-up {
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    right: 16px;
-    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    right: 28px;
+    bottom: 24px;
     line-height: 30px;
   }
 }
