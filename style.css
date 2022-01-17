@@ -138,6 +138,12 @@ p {
   color: hsl(204, 93%, 49%);
 }
 
+.navbar__logo i {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: hsl(204, 93%, 49%);
+}
+
 .navbar__logo a {
   color: #080700;
   margin-left: 10px;

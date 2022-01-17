@@ -6,6 +6,7 @@
         });
         
 
+<<<<<<< Updated upstream
 // 카테고리 클릭 시 일치하는 것만 보여주기
     homeCategories.addEventListener('click', (e) => {
         const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;     
@@ -36,6 +37,36 @@
             }, 200);
             
     });
+=======
+const projects = document.querySelectorAll('.project'); //1. 프로젝트들 하나하나를 projects 배열에 담아줌
+    homeCategories.addEventListener('click', (e) => {
+const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter
+    if(filter == null) {
+        return; // 아무일도 안일어나게
+    }
+    
+    // selected 제거랑 추가 애니메이션 효과
+    const active = document.querySelector('.home__btn.selected')
+        active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+        target.classList.add('selected');
+    const homeProjects = document.querySelector('.home__projects');
+        homeProjects.classList.add('anim-out');
+        
+        setTimeout(() => {
+            projects.forEach((project) => { //2. 프로젝트's에 있는 배열들 하나하나를 프로젝트로 받아옴
+            if(filter === "전체" || filter === project.dataset.type) { //필터가 "전체"이거나 필터랑 타입 이름이 같으면
+                project.classList.remove('invisible')
+            } else {
+                project.classList.add('invisible')
+                }
+            });
+            homeCategories.classList.remove('open');
+            homeProjects.classList.remove('anim-out');
+        }, 200);
+        
+});
+>>>>>>> Stashed changes
 
 // ↑ 버튼 클릭하면 맨 위로 올라가게
     const arrowUp = document.querySelector('.arrow-up');
