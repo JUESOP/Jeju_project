@@ -102,15 +102,6 @@
     transition: all var(--animation-duration) ease-in-out;
   }
   
-  .navbar__toggle-btn {
-    position: absolute;
-    top: 24px;
-    right: 32px;
-    font-size: 24px;
-    color: var(--color-white);
-    display: none;
-  }
-  
   .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
@@ -129,14 +120,15 @@
   }
 
   #container {
-    width: 1000px;
-    margin: 60px auto;
+    width: 600px;
+    margin: 0 auto;
     background-color: var(--color-light-white);
-    display: flex;
+    padding: 4px;
   }
   
   .prod-pic {
       margin: 20px;
+      /* width: 100%; */
   }
   
   .cup {
@@ -163,16 +155,19 @@
   }
   
   #desc {
+      padding-top: 4px;
+      text-align: left;
       font-size: 25px;
-      width: 400px;
-      height: 50%;
-      position: relative;
-      right: 10px;
-      top: 120px;
+  }
+
+  #desc h1 {
+      font-size: 30px;
+      text-align: center;
+      
   }
   
   #desc ul {
-      padding-left: 40px;
+      padding-left: 50px;
   }
   
   #desc li {
@@ -181,7 +176,7 @@
   }
   
 /* For below 768px screen width */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
     :root {
       /* Font size */
       --font-large: 30px;
@@ -190,59 +185,46 @@
       --font-small: 14px;
       --font-micro: 12px;
     }
+
+    #container {
+        width: 480px;
+        margin: 0 auto;
+        background-color: var(--color-light-white);
+        padding: 4px;
+      }
   
     .section {
       padding: 16px;
       padding-top: 40px;
     }
-  
-    .navbar__toggle-btn {
-      display: block;
-      top: 20px;
-      right: 16px;
-      color: var(--color-dark-pink);
-      font-size: var(--font-large);
-    }
-  #container {
-    width: 600px;
-    margin: 60px auto;
-    background-color: var(--color-light-white);
-    display: flex;
-  }
-  
+
+
     .prod-pic {
-        margin: 10px;
+        margin: 25px;
     }
 
     .cup {
         box-shadow: 1px 1px 2px #eee;
         outline: 1px dashed #eee;
         outline-offset: -7px;
-        width: 280px;
+        width: 420px;
         height: 250px;
-    }
+        cursor: pointer;
+    } 
 
     .small-pic {
         margin-top: 20px;
         list-style: none;
         padding: 0%;
+    } 
+    
+    .small {
+        width: 137px;
+        height: 80px;
     }
 
     #desc {
         font-size: 18px;
-        width: 400px;
-        height: 50%;
-        position: relative;
-        right: 50px;
-        top: 120px;
-    }
-    
-    #desc ul {
-        padding-left: 40px;
-    }
-    
-    #desc li {
-        font-size: 0.9em;
-        line-height: 1.8;
-    }
+        
+    } 
 }
