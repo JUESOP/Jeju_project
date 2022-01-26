@@ -47,7 +47,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 ul {
@@ -231,6 +231,7 @@ p {
   font-size: 18px;
   position: absolute;
   padding: 0;
+  top: 35px;
   left: 250px;
   text-align: right;
   font-weight: bold;
@@ -240,10 +241,12 @@ p {
     position: absolute;
     padding: 0;
     left: 350px;
+    top: 35px;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
 }
+
 
 .picture {
   font-size: var(--font-large);
@@ -251,6 +254,7 @@ p {
   position: absolute;
   width: 150px;
   height: 100px;
+  top: 20px;
   left: 50px;
   border-radius: 5px;
 }
